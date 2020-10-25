@@ -1,0 +1,45 @@
+.navigation {
+    font-size: $font-small-2;
+    align-self: center;
+    grid-column: 1 / 4;
+
+    &--header {
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+            grid-column: unset;
+        }
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 6rem
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-primary-light-2;
+        display: inline-block;
+        transition: all .2s;
+
+        &--footer {
+            color: $color-grey-light-4;
+
+            @media only screen and (max-width: $bp-small) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            color: $color-grey-light-2;
+            transform: translateY(-2px);
+
+            &::after {
+                transform: translateY(-1px);
+            }
+        }
+    }
+}

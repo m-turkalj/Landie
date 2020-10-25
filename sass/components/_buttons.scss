@@ -1,0 +1,105 @@
+.btn {
+    background-color: $color-primary-dark-3;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-size: $font-small-3; 
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+
+    &:active,
+    &:focus {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    &--small{
+        padding: .6rem 3.2rem;
+        font-weight: 500;
+    }
+
+    &--medium{
+        padding: .9rem 6rem;
+    }
+
+    &--large {
+        padding: .85rem 3.95rem;
+        font-weight: 500;
+        font-size: $font-small-1;
+        line-height: 2.6rem;
+        color: #FFFFFF;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: .85rem 1.95rem;
+            font-size: $font-small-3;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: .85rem 1rem;
+        }
+    }
+
+    &--large-empty {
+        padding: .65rem 5.2rem;
+        font-weight: 500;
+        font-size: $font-small-1;
+        line-height: 2.6rem;
+        color: $color-primary-dark-4;
+        border: 2px solid $color-primary-dark-4;
+        background-color: #FFF;
+        margin-left: 3rem;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 0.65rem 3.2rem;
+            font-size: $font-small-3;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 0.65rem 1.9rem;
+        }
+    }
+
+    &--stretch {
+        padding: .9rem 7.2rem;
+    }
+
+    &--purchase {
+        padding: 0.7rem 4.5rem;
+    }
+}
+
+
+.nav-button {
+    display: none;
+    grid-column: 12 / 13;
+    grid-row: 1 / 1;
+    justify-self: center;
+    align-self: center;
+    
+    @media only screen and (max-width: $bp-medium) {
+        display: block;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 4 / 5;
+        justify-self: end;
+    }
+
+    
+    &__link {
+        //
+    }
+
+    &__icon {
+        padding: 1rem;
+        border: 1px solid grey;
+        border-radius: .8rem;
+    }
+}
